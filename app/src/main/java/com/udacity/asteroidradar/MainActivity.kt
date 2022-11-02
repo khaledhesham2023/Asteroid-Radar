@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         // start the music
         appMusic.start()
+        appMusic.setOnCompletionListener {
+            it.start()
+        }
     }
 
     override fun onPause() {
